@@ -24,4 +24,12 @@ export class EnlacesprincipalesService {
   redireccionTienda(){
     this.router.navigate(['tienda']);
   }
+
+  redireccionLogin(){
+    this.router.navigate(['login']);
+  }
+
+  redireccionRegister(){
+    this.router.navigate(['register']);
+  }
 }
