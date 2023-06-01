@@ -1,0 +1,35 @@
+
+
+.navbar_PP {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  background-color: #E7E7E7!important;
+  color: white;
+  /* width: 150%; Agrega esta propiedad */
+}
+/* Estilos para el logo */
+.navbar_PP img {
+  height: 50px;
+  width: 100px;
+}
+/* Estilos para los elementos de la derecha */
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+.navbar_PP a { /*Establece el estilo para los enlaces dentro de la barra de navegación, incluyendo un formato de bloque, un relleno de 20 píxeles en la parte superior e inferior y un tamaño de fuente y color de texto determinados.*/
+  display: block;
+  padding: 20px 20px;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  background: #E7E7E7; /* Agrega un fondo a los enlaces */
+}
+
+.navbar_PP a:hover {
+  background: #cac9c9;
+  color: rgb(0, 0, 0); /* Cambia el color de texto al pasar el mouse por encima */
+  padding: 20px 20px;
+}

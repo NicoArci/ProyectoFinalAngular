@@ -1,0 +1,71 @@
+<header class="header">
+  
+</header>
+
+<section class="content sau">
+  <!-- Crea una sección con clase "content" y "sau" -->
+  <style>
+    body {
+      background-color: #dddddd; /*coloca de fondo un color gris claro*/
+    }
+  </style>
+  <h2>SERVICIOS QUE PRESTAMOS</h2>
+  <div class="image-container">
+    <div class="image">
+      <img
+        src="../../../assets/images/Contabilidad mensual para empresas.png"
+        alt="Imagen 1"
+      />
+      <p class="register-link">
+        <a (click)="enlaceServicios.redireccionTienda()"
+          >Contabilidad mensual para empresas</a
+        >
+      </p>
+    </div>
+    <div class="image">
+      <img
+        src="../../../assets/images/Contabilidad Mensual para Personas Físicas con Actividad Empresarial.png"
+        alt="Imagen 2"
+      />
+      <p class="register-link">
+        <a (click)="enlaceServicios.redireccionTienda()"
+          >Contabilidad Mensual para Personas Físicas</a
+        >
+      </p>
+    </div>
+    <div class="image">
+      <img
+        src="../../../assets/images/Contabilidad Mensual para Hosts Airbnb.png"
+        alt="Imagen 3"
+      />
+      <p class="register-link">
+        <a (click)="enlaceServicios.redireccionTienda()"
+          >Contabilidad Mensual para Hosts Airbnb.</a
+        >
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="content price">
+  <!-- aqui va lo de nosotros visiones etc -->
+  <h2>LA EMPRESA</h2>
+  <div class="contenedor-imagenes">
+    <figure>
+      <img src="../../../assets/images/imagen 1.png" alt="Imagen 1" />
+      <button type="button" class="fcc-btn" (click)="enlaceServicios.redireccionNosotros()">
+        Nosotros
+      </button>
+    </figure>
+    <figure>
+      <img src="../../../assets/images/imagen 2.png" alt="Imagen 2" />
+      <button type="button" onclick="enlaceServicios.redireccionVision()" class="fcc-btn">
+        Vision
+      </button>
+    </figure>
+    <figure>
+      <img src="../../../assets/images/imagen 3.png" alt="Imagen 3" />
+      <button type="button" onclick="enlaceServicios.redireccionMision()">Mision</button>
+    </figure>
+  </div>
+</section>
