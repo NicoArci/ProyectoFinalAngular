@@ -1,16 +1,47 @@
 <div class="header">
     <p class="logo">Multiservice Consulting Group</p>
-    <div class="cart"><i class="fa-solid fa-cart-shopping"></i><p id="count">0</p></div>
-</div>
-
-<div class="container">
-    <div id="root"></div>
-    <div class="sidebar">
-        <div class="head"><p>My Cart</p></div>
-        <div id="cartItem">Your cart is empty</div>
-        <div class="foot">
-            <h3>Total</h3>
-            <h2 id="total">$ 0.00</h2>
+    <div class="cart">
+        <i class="fas fa-shopping-cart"></i>
+        <p id="count">{{ cart.length }}</p>
+      </div>
+  </div>
+  
+  <div class="container">
+    <div id="root">
+      <div class='box' *ngFor="let product of products">
+        <div class='img-box'>
+          <img class='images' [src]="product.image" />
         </div>
+        <div class='bottom'>
+          <p>{{ product.title }}</p>
+          <p>{{ product.info }}</p>
+          <h2>$ {{ product.price }}.00</h2>
+          <button (click)="addtocart(product)">Add to cart</button>
+        </div>
+      </div>
     </div>
-</div>
+    <div class="sidebar">
+      <div class="head">
+        <p>My Cart</p>
+      </div>
+      <div id="cartItem">
+        <ng-container *ngIf="cart.length === 0; else cartItems">
+          Your cart is empty
+        </ng-container>
+        <ng-template #cartItems>
+          <div class='cart-item' *ngFor="let item of cart; let i = index">
+            <div class='row-img'>
+              <img class='rowimg' [src]="item.image" />
+            </div>
+            <p style='font-size: 19px;'>{{ item.title }}</p>
+            <h2 style='font-size: 19px;'>$ {{ item.price * item.quantity }}.00</h2>
+          </div>
+        </ng-template>
+      </div>
+      <div class="foot">
+        <h3>Total</h3>
+        <h2 id="total">$ {{ getTotal() }}.00</h2>
+      </div>
+    </div>
+  </div>
+  
