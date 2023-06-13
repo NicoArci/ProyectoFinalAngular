@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import{faCartShopping} from '@fortawesome/free-solid-svg-icons'
+import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 
 interface Product {
   id: number;
@@ -18,7 +20,11 @@ interface CartItem extends Product {
   styleUrls: ['./tienda.component.css']
 })
 export class TiendaComponent {
-  products: Product[] = [
+  
+  CartIcon = faCartShopping;
+  products: 
+  
+  Product[] = [
     {
       id: 1,
       title: "Contabilidad Mensual para Empresas",
@@ -43,8 +49,11 @@ export class TiendaComponent {
     // Agrega más productos aquí...
   ];
 
-  cart: CartItem[] = [];
 
+  cart: CartItem[] = [];
+  constructor(private library: FaIconLibrary){
+    library.addIcons(faCartShopping)
+  }
   addtocart(product: Product) {
     const itemIndex = this.cart.findIndex(item => item.id === product.id);
 
@@ -56,10 +65,6 @@ export class TiendaComponent {
     }
   }
 
-  delElement(index: number) {
-    this.cart.splice(index, 1);
-  }
-
   getTotal(): number {
     let total = 0;
     for (const item of this.cart) {
@@ -68,3 +73,4 @@ export class TiendaComponent {
     return total;
   }
 }
+

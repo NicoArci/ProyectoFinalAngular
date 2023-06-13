@@ -14,6 +14,8 @@ import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { VisionComponent } from './pages/vision/vision.component';
 import {MisionComponent } from './pages/mision/mision.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 @NgModule({
   declarations: [
@@ -26,13 +28,11 @@ import { FooterComponent } from './components/footer/footer.component';
     NosotrosComponent,
     VisionComponent,
     MisionComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
