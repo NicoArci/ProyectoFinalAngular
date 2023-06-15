@@ -22,6 +22,9 @@
     max-width: 800px;
   }
   
+  .img-fluid{
+    margin-left: 15%;
+  }
   
   .image {
     flex: 1;
@@ -110,7 +113,11 @@
     color: #3b5cc9;
   }
     
-      
+  .btn_login{
+    width: 200px;
+    margin: 0px auto;
+    
+  }
   
   
   button[type="submit"]:hover {

@@ -32,4 +32,8 @@ export class EnlacesprincipalesService {
   redireccionRegister(){
     this.router.navigate(['register']);
   }
+
+  redireccionPerfil(){
+    this.router.navigate(['perfil']);
+  }
 }

@@ -7,5 +7,5 @@ import { EnlacesprincipalesService } from 'src/app/routes/enlacesprincipales.ser
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
-  constructor( public enlaceServicios:EnlacesprincipalesService){}
+  constructor( protected enlaceServicios:EnlacesprincipalesService){}
 }

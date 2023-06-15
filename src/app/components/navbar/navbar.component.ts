@@ -8,7 +8,7 @@ import { EnlacesprincipalesService } from 'src/app/routes/enlacesprincipales.ser
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  constructor( public enlaceServicios:EnlacesprincipalesService){}
+  constructor( protected enlaceServicios:EnlacesprincipalesService){}
     
   
 }

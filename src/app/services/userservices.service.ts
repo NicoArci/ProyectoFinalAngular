@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpErrorResponse, HttpHeaders, HttpResponse} from '@angular/common/http'
-
+import { EnlacesprincipalesService } from '../routes/enlacesprincipales.service';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,8 @@ export class UserservicesService {
   private userEmail!:string;
   private apiUrl = "http://localhost:3000/users";
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,
+    private router: Router) { }
   //Login conexion API
   loginUser(email:string, password:string):void{
     const loginUrl = `${this.apiUrl}/login`; //Url para conectar el login de la API
@@ -22,8 +24,10 @@ export class UserservicesService {
     .subscribe(
       (response: any) => {
         localStorage.setItem("token", response.token)
-        console.log("respuesta: ", response)
+        // console.log("respuesta: ", response)
         this.userEmail = formData.email;
+        this.router.navigate(['/perfil'])
+        // alert("Inicio de sesion Exitoso");
       },
       (error) =>{
         if(error instanceof HttpErrorResponse){
@@ -38,6 +42,11 @@ export class UserservicesService {
     )
   }
 
+
+  getUser(){
+    const getUserUrl = `${this.apiUrl}/${this.userEmail}`;
+    return this.http.get(getUserUrl);
+  }
 
 
 

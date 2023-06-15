@@ -18,8 +18,9 @@ export class LoginComponent {
   loginComp(){
     this.userservice.loginUser(this.email,this.password)
     //verificar el funcionamiento
-    console.log("Email: " +this.email)
-    console.log("password: " + this.password)
+    
+    // console.log("Email: " +this.email)
+    // console.log("password: " + this.password)
   }
 
 }

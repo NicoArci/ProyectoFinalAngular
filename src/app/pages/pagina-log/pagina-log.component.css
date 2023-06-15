@@ -1,4 +1,5 @@
 /* Estilos para el cuerpo */
+
 .header { /*Define el estilo para el encabezado principal de la página, que incluye un diseño flexbox y una imagen de fondo escalada para ajustarse al tamaño del contenedor.*/
     display: flex;
     justify-content: center;
@@ -6,10 +7,18 @@
     width: 100%;
     height: 481px;
     /* height: 60vh !important; */
-    background: url(../../../assets/images/header.jpg) no-repeat center;
+    background: url(../../../assets/images/headerDos.jpg) no-repeat center;
     background-size: cover;
 
 
+}
+
+header h1{
+  text-align: center;
+  font-size: 5rem;
+  padding: 100px 50px;
+  
+  color:#dddddd; 
 }
 
 .title { /*Establece el estilo para el título en el encabezado principal, incluyendo el tamaño de fuente, peso de fuente, color del texto y transformación de texto en mayúsculas.*/
@@ -20,14 +29,20 @@
     color: #ffffff;
 }
 
+h2{
+  margin-top: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
 p {  /*Establece el estilo para los párrafos en el encabezado principal, incluyendo el tamaño de fuente, color del texto, margen inferior y relleno a la iz*/
     margin-bottom: 40px;
-    font-size: 35px;
+    font-size: 23px;
     color: #000000;
     padding: 0 100px;
 }
 
-/* Estilos para los botones */
+
 
 
 /* Establecer los estilos del botón de inicio */
@@ -53,7 +68,8 @@ p {  /*Establece el estilo para los párrafos en el encabezado principal, incluy
 
 .sau {
     padding: 30px;
-    background: #dddddd;
+    background-color:#1d2866;
+    color: #dddddd;
     /*sirve para rellenar el contenido con la imagen */
 
 }
@@ -125,11 +141,9 @@ a {
 }
 
 .register-link a {
-  color: #000000;
+  color: #dddddd;
   text-decoration: none;
-  padding: 5px;
-  margin: 5px;
-  text-align: justify;
+  text-align: left;
   }
 
   /* Estilo para el enlace "¿Tienes una cuenta? Inicia sesión" cuando se desplaza sobre él */
@@ -139,6 +153,11 @@ a {
   }
 
   @media (max-width: 768px) {
+    .header { /*Define el estilo para el encabezado principal de la página, que incluye un diseño flexbox y una imagen de fondo escalada para ajustarse al tamaño del contenedor.*/
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;}
+      
     .image-container {
       display: flex;
       justify-content: center;
@@ -162,6 +181,15 @@ a {
       font-size: 1.5rem;
       color: #000000;
       padding: 0%;
+
+    
+  }
+  .header h1{
+    text-align: left;
+    font-size: 3.5rem;
+    padding: 100px 50px;
+    margin-right: 60%;
+    color: #d4d4d4; 
   }
 
 
