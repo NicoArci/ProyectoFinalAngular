@@ -42,6 +42,33 @@ export class UserservicesService {
     )
   }
 
+  create(username:string, email:string,password:string, name:string,lastname:string,
+    typedocument:string,numdocument:number,telnumber:number,persontype:string){
+      const createUrl = `${this.apiUrl}/create`;
+      const formData = {
+                username : username,
+                password:password,
+                name: name,
+                lastname: lastname,
+                typedocument: typedocument,
+                numdocument: numdocument,
+                email: email,
+                telnumber: telnumber,
+                persontype: persontype,
+                
+      }
+      this.http.post(createUrl,formData)
+      .subscribe(
+        (response:any) => {
+          console.log("Registro exitoso", response);
+          this.router.navigate(['/login'])
+        },
+        (error) => {
+          console.log("error: ", error)
+        }
+      )
+    }
+
 
   getUser(){
     const getUserUrl = `${this.apiUrl}/${this.userEmail}`;
